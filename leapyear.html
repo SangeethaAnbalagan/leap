@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap year</title>
+    <script>
+        function Leapyear(){
+           const a=parseInt(document.getElementById("input1").value);
+           const b=parseInt(document.getElementById("input2").value);
+           let leapyear=[];
+            
+             for(let i=a;i<=b;i++){
+            if( i%4===0 && i%100!==0 ||i%400===0){
+            
+            leapyear.push(i);
+          
+           }
+          
+           }
+           
+           document.getElementById("out").innerHTML=leapyear;
+
+        };
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Leap year calculator</h1>
+        <hr>
+        <input type="number" id="input1" placeholder="Enter a year"><br><br>
+        <input type="number" id="input2" placeholder="Enter a year"><br><br>
+        <input type="button" value="check"  onclick="Leapyear()"><br><br>
+       <label id="out"></label>
+    </center>
+
+</body>
+</html>
